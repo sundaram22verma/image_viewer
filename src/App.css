@@ -1,0 +1,104 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+/* App Container */
+.app {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Image Container */
+.main-image-container {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ddd;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Thumbnail Slider */
+.thumbnail-slider .slick-slide {
+  margin: 0 10px; /* Increase space between thumbnails */
+}
+
+.thumbnail-slider {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.thumbnail-slider .slick-track {
+  padding: 0; /* Remove extra padding */
+}
+
+/* Thumbnail Styles */
+.thumbnail {
+  width: 120px;
+  height: 80px;
+  cursor: pointer;
+  opacity: 0.6;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail.active {
+  border: 2px solid #007bff; /* Blue border for active thumbnail */
+  transform: scale(1.2); /* Slight zoom effect for the active thumbnail */
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+@media (max-width: 768px) {
+  .main-image {
+    width: 80%; /* Adjust for smaller screens */
+  }
+
+  .thumbnail {
+    width: 100px; /* Smaller thumbnails */
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image {
+    width: 95%;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 60px;
+  }
+}
